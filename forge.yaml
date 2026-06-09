@@ -1,0 +1,7 @@
+kind: mcp
+tech: ts
+# MCP servers use stdio transport — they do NOT expose HTTP.
+# No port, no ingress, no DNS record is provisioned for this kind.
+# The container is executed directly by an MCP client (e.g., Claude Desktop).
+deploy:
+  kind: stdio
